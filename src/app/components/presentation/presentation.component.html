@@ -1,0 +1,92 @@
+<header>
+  <h2>Présentation</h2>
+</header>
+
+<section>
+  <h3>Interpolation</h3>
+
+  <p>1 + 2 = {{ 1 + 2 }}</p>
+
+  <p>Bonjour {{ firstname }}</p>
+
+  <p>{{ product.name }} @ {{ product.price }}€</p>
+
+  <h4>Affichage sécurisé (protection contre les attaques xss)</h4>
+  <p>{{ html }}, &lt;b&gt;coucou&lt;/b&gt;</p>
+
+  <h4>Affichage non sécurisé (doit être utilisé avec du contenu "safe")</h4>
+  <p [innerHTML]="html"></p> <!-- [] = directive d'attribut -->
+
+  <!-- image -->
+  <!-- avec l'attribut html, on indique une string -->
+  <img src="{{ source }}" alt="chien extraterrestre" width="300" />
+
+  <!-- avec une directive angular, on indique du code JS/TS -->
+  <img [src]="source" alt="chien extraterrestre" width="300" />
+
+  <img src="assets/images/loxy.jpeg" alt="chien extraterrestre" width="300" />
+</section>
+
+<section>
+  <h3>Event</h3>
+
+  <div class="mb-3">
+    <button class="btn btn-outline-primary" (click)="hello()"> Cliquez ici </button>
+  </div>
+
+  <div class="mb-3">
+    <a href="#" class="btn btn-outline-primary" (click)="confirmation($event)"> Supprimer cette ressource </a>
+  </div>
+</section>
+
+<section>
+  <h3>Two Way Data Binding</h3>
+  <p>MVVM ou MWM : Model View, View Model</p>
+
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Entrer votre message" [(ngModel)]="message" />
+    <button class="btn btn-outline-secondary" (click)="showMessage()">Voir le message</button>
+  </div>
+  <p>{{ message }}</p>
+</section>
+
+<section>
+  <h3>Les variables de template</h3>
+  <p>Les variables de template se déclare avec <b>#nomdelavariable</b> sur une balise HTML.
+    (document.querySelector() ou document.getElementById())</p>
+
+  <p>detectChange() = responsable de mettre à jour les vues sur Angular ! (ngModel ou event)</p>
+
+  <!-- false => 0 | "" | null | undefined | NaN => falsy -> if(!name) -->
+  <div>
+    <input type="text" class="form-control" placeholder="Indiquez votre nom" #input (keyup.enter)="0"
+      (keyup.control.s)="false" />
+  </div>
+
+  <p>input: {{ input }}</p>
+  <p>type: {{ input.type }}</p>
+  <p>class: {{ input.className }}</p>
+  <p>value: {{ input.value }}</p>
+
+</section>
+
+<section>
+  <h3>ngForOf</h3>
+
+  <ul>
+    <li *ngFor="let name of users; index as key"> {{ name }} <small>(index = {{ key }})</small></li>
+  </ul>
+</section>
+
+<!--
+  array.push(value) => ajoute une valeur à la fin du tableau
+  array.splice(index, qte) => supprime une ou +ieur valeurs du tableau
+
+  1_
+  Créer une todolist dans un nouveau composant
+  champs input (valider avec et/ou touche entrer) -> ajouter la tache dans un tableau
+  faire afficher le tableau
+
+  2_
+  click sur une tache du tableau -> supprimer la tache
+-->
