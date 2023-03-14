@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class FiltersComponent {
 
+  date = new Date();
+
+  studients = [
+    "Soukaina", "Vanessa", "Bogdan", "Mahatoky", "Benjamin", "Jonathan", "Raphaël",
+    "Souleymane", "Sofiane", "Damien", "Samir", "Chaymae", "Anas", "Fatou", "Paul"
+  ];
+
 }
