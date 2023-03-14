@@ -8,6 +8,8 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { HomeComponent } from './components/home/home.component';
 import { FiltersComponent } from './components/filters/filters.component';
+import { DirectiveComponent } from './components/directive/directive.component';
+import { LocaleComponent } from './components/locale/locale.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FiltersComponent } from './components/filters/filters.component';
     PresentationComponent,
     TodolistComponent,
     HomeComponent,
-    FiltersComponent
+    FiltersComponent,
+    DirectiveComponent,
+    LocaleComponent
   ],
   imports: [
     BrowserModule,
