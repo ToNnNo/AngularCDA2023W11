@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
+import { HomeComponent } from './components/home/home.component';
+import { FiltersComponent } from './components/filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresentationComponent,
-    TodolistComponent
+    TodolistComponent,
+    HomeComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
