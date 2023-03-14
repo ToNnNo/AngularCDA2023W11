@@ -15,6 +15,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { LocaleComponent } from './components/locale/locale.component';
+import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LocaleComponent } from './components/locale/locale.component';
     HomeComponent,
     FiltersComponent,
     DirectiveComponent,
-    LocaleComponent
+    LocaleComponent,
+    CustomPipeComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

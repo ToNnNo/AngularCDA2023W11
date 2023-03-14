@@ -1,0 +1,12 @@
+<header>
+  <h2>Les filtres personnalisés</h2>
+</header>
+
+<div class="btn-group btn-group-sm mb-3">
+  <button class="btn btn-outline-primary" (click)="order = 'ASC'">Croissant</button>
+  <button class="btn btn-outline-primary" (click)="order = 'DESC'">Décroissant</button>
+</div>
+
+<ul>
+  <li *ngFor="let studient of studients | sort: order ">{{ studient }}</li>
+</ul>

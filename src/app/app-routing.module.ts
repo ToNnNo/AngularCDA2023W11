@@ -7,6 +7,7 @@ import {TodolistComponent} from "./components/todolist/todolist.component";
 import {FiltersComponent} from "./components/filters/filters.component";
 import {DirectiveComponent} from "./components/directive/directive.component";
 import {LocaleComponent} from "./components/locale/locale.component";
+import {CustomPipeComponent} from "./components/custom-pipe/custom-pipe.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, title: "Accueil" },
@@ -15,6 +16,13 @@ const routes: Routes = [
   { path: "filters", component: FiltersComponent, title: "Les filtres" },
   { path: "directives", component: DirectiveComponent, title: "Les directives" },
   { path: "locale", component: LocaleComponent, title: "Les locales" },
+  {
+    path: "custom",
+    children: [
+      { path: "", redirectTo: "pipe", pathMatch: "full" }, // prefix
+      { path: "pipe", component: CustomPipeComponent, title: "Filtres personnalisés" }
+    ]
+  },
 ];
 
 @NgModule({
