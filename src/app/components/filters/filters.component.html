@@ -51,12 +51,14 @@
   <h3>Slice</h3>
 
   <ul> <!-- slice [0, 5[ -->
-    <li *ngFor="let studient of studients | slice: 0: 5"> {{ studient }} </li>
+    <li *ngFor="let studient of studients | slice: start: end"> {{ studient }} </li>
   </ul>
 
   <div class="input-group">
-    <button class="btn btn-outline-primary btn-sm">&laquo; Prev</button>
-    <button class="btn btn-outline-primary btn-sm">Next &raquo;</button>
+    <button class="btn btn-outline-primary btn-sm" (click)="prev()" [disabled]="start <= 0">
+      &laquo; Prev</button>
+    <button class="btn btn-outline-primary btn-sm" (click)="next()" [disabled]="end >= studients.length">
+      Next &raquo;</button>
   </div>
 
 </section>
