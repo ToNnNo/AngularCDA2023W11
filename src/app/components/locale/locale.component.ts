@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, DEFAULT_CURRENCY_CODE, Inject, LOCALE_ID} from '@angular/core';
 
 @Component({
   selector: 'app-locale',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class LocaleComponent {
 
+  /*locale = 'en';
+  devise = 'USD';*/
+
+  date = new Date();
+
+  /**
+   * public locale: string
+   *
+   * constructor(@Inject(LOCALE_ID) locale: string) {
+   *   this.locale = locale
+   * }
+   * */
+  constructor(
+    @Inject(LOCALE_ID) public locale: string,
+    @Inject(DEFAULT_CURRENCY_CODE) public devise: string
+  ) { }
 }

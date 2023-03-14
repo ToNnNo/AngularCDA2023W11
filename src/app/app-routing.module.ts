@@ -6,6 +6,7 @@ import {PresentationComponent} from "./components/presentation/presentation.comp
 import {TodolistComponent} from "./components/todolist/todolist.component";
 import {FiltersComponent} from "./components/filters/filters.component";
 import {DirectiveComponent} from "./components/directive/directive.component";
+import {LocaleComponent} from "./components/locale/locale.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, title: "Accueil" },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "todo", component: TodolistComponent, title: "Todo List" },
   { path: "filters", component: FiltersComponent, title: "Les filtres" },
   { path: "directives", component: DirectiveComponent, title: "Les directives" },
+  { path: "locale", component: LocaleComponent, title: "Les locales" },
 ];
 
 @NgModule({
