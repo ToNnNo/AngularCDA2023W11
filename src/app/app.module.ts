@@ -21,6 +21,7 @@ import { FormComponent } from './components/form/form.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ServiceComponent } from './components/service/service.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ObservableComponent } from './components/observable/observable.componen
     FormComponent,
     SignupComponent,
     ServiceComponent,
-    ObservableComponent
+    ObservableComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
