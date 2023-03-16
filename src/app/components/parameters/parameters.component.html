@@ -1,0 +1,16 @@
+<header>
+  <h2>Les paramètres d'url</h2>
+</header>
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/parameters/john">John Doe</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/parameters', janeParameter]">Jane Doe</a>
+  </li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

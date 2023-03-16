@@ -22,6 +22,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ServiceComponent } from './components/service/service.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ParametersComponent } from './components/parameters/parameters.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { CartComponent } from './components/cart/cart.component';
     SignupComponent,
     ServiceComponent,
     ObservableComponent,
-    CartComponent
+    CartComponent,
+    ParametersComponent,
+    DetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
