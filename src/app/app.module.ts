@@ -19,6 +19,7 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
 import { SortPipe } from './pipes/sort.pipe';
 import { FormComponent } from './components/form/form.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ServiceComponent } from './components/service/service.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SignupComponent } from './components/signup/signup.component';
     CustomPipeComponent,
     SortPipe,
     FormComponent,
-    SignupComponent
+    SignupComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,

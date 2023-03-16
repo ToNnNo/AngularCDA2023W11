@@ -1,0 +1,11 @@
+<header>
+  <h2>Les services</h2>
+</header>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Entrer votre message secret" [(ngModel)]="message"
+         (keyup.enter)="crypt()" />
+  <button class="btn btn-outline-secondary" (click)="crypt()">Crypter</button>
+</div>
+
+<p>{{ result }}</p>
