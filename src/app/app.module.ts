@@ -1,6 +1,6 @@
 import {DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { registerLocaleData } from "@angular/common";
 import fr from "@angular/common/locales/fr";
@@ -18,6 +18,7 @@ import { LocaleComponent } from './components/locale/locale.component';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { SortPipe } from './pipes/sort.pipe';
 import { FormComponent } from './components/form/form.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +31,14 @@ import { FormComponent } from './components/form/form.component';
     LocaleComponent,
     CustomPipeComponent,
     SortPipe,
-    FormComponent
+    FormComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' },
