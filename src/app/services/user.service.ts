@@ -15,4 +15,8 @@ export class UserService {
   public findAll(): Observable<UserInterface[]> {
     return this.http.get<UserInterface[]>(`${this.baseUrlApi}/users`);
   }
+
+  public find(id: string|number): Observable<UserInterface> {
+    return this.http.get<UserInterface>(`${this.baseUrlApi}/users/${id}`);
+  }
 }

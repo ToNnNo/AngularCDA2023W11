@@ -29,6 +29,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { UserComponent } from './components/user/user.component';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { UserComponent } from './components/user/user.component';
     NotFoundComponent,
     AuthenticationComponent,
     ProfilComponent,
-    UserComponent
+    UserComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
