@@ -1,0 +1,9 @@
+<header>
+  <h2>Connexion</h2>
+</header>
+
+<button class="btn btn-outline-primary" (click)="login()" *ngIf="!state; else deconnexion">Connexion</button>
+
+<ng-template #deconnexion>
+  <button class="btn btn-outline-danger" (click)="logout()">Déconnexion</button>
+</ng-template>

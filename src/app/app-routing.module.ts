@@ -15,6 +15,8 @@ import {ObservableComponent} from "./components/observable/observable.component"
 import {ParametersComponent} from "./components/parameters/parameters.component";
 import {DetailComponent} from "./components/detail/detail.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {AuthenticationGuard} from "./guards/authentication.guard";
+import {AuthenticationComponent} from "./components/authentication/authentication.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, title: "Accueil" },
@@ -41,10 +43,10 @@ const routes: Routes = [
     title: "Paramètres d'url",
     // nesting routes
     children: [
-      { path: ":slug", component: DetailComponent, title: "Détail"}
+      { path: ":slug", component: DetailComponent, title: "Détail", canActivate: [AuthenticationGuard] }
     ]
   },
-
+  { path: "authentication", component: AuthenticationComponent, title: "Connexion" },
   // doit toujours être le dernier chemin à tester dans les routes
   { path: "**", component: NotFoundComponent, title: "Not Found" }
 ];

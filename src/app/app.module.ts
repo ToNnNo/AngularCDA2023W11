@@ -25,6 +25,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { ParametersComponent } from './components/parameters/parameters.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { ProfilComponent } from './components/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     CartComponent,
     ParametersComponent,
     DetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AuthenticationComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
