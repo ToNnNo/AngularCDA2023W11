@@ -1,6 +1,7 @@
 import {DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 import { registerLocaleData } from "@angular/common";
 import fr from "@angular/common/locales/fr";
@@ -27,6 +28,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { ProfilComponent } from './components/profil/profil.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -48,13 +50,15 @@ import { ProfilComponent } from './components/profil/profil.component';
     DetailComponent,
     NotFoundComponent,
     AuthenticationComponent,
-    ProfilComponent
+    ProfilComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' },

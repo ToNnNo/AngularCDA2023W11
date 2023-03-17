@@ -1,0 +1,32 @@
+<header>
+  <h2>Liste des utilisateurs</h2>
+</header>
+
+<div class="my-3">
+  <button class="btn btn-sm btn-outline-primary" (click)="refresh()">Recharger</button>
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.phone }}</td>
+    <td>
+      Voir détail
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -17,6 +17,7 @@ import {DetailComponent} from "./components/detail/detail.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {AuthenticationGuard} from "./guards/authentication.guard";
 import {AuthenticationComponent} from "./components/authentication/authentication.component";
+import {UserComponent} from "./components/user/user.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, title: "Accueil" },
@@ -47,6 +48,7 @@ const routes: Routes = [
     ]
   },
   { path: "authentication", component: AuthenticationComponent, title: "Connexion" },
+  { path: "user", component: UserComponent, title: "Liste des utilisateurs" },
   // doit toujours être le dernier chemin à tester dans les routes
   { path: "**", component: NotFoundComponent, title: "Not Found" }
 ];
